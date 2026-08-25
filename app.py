@@ -4,7 +4,7 @@ import random
 
 # 페이지 기본 설정
 st.set_page_config(
-    page_title="365 성경 영어구문 암기",
+    page_title="365 성경 영어구문 암기 앱",
     page_icon="📖",
     layout="centered"
 )

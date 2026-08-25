@@ -9,18 +9,6 @@ st.set_page_config(
     layout="centered"
 )
 
-# 스마트폰 홈 화면 추가 시 앱 이름 및 아이콘 메타 태그 설정
-st.markdown("""
-    <head>
-        <!-- 아이폰/아이패드 홈 화면 저장 시 앱 이름 지정 -->
-        <meta name="apple-mobile-web-app-title" content="365 성경영어">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <!-- 안드로이드 Chrome 홈 화면 저장 시 앱 이름 지정 -->
-        <meta name="application-name" content="365 성경영어">
-    </head>
-""", unsafe_allow_html=True)
-
-# ... (이하 기존 커스텀 CSS 및 데이터 로드 코드 동일) ...
 # 커스텀 CSS
 st.markdown("""
     <style>

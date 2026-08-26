@@ -2,22 +2,21 @@ import streamlit as st
 import pandas as pd
 import random
 
-# 1. 페이지 기본 설정
+# 1. 페이지 기본 설정 (브라우저 탭 제목)
 st.set_page_config(
-    page_title="365 성경 영어구문 암기",
+    page_title="영어성경 365",
     page_icon="📖",
     layout="centered"
 )
 
-# 2. 홈 화면 저장용 메타 태그 및 커스텀 CSS 설정
 # 2. 모바일 앱 이름 지정 메타 태그 및 스타일 설정
 st.markdown("""
     <head>
         <!-- 아이폰/아이패드 홈 화면 저장 시 앱 이름 지정 -->
-        <meta name="apple-mobile-web-app-title" content="365 성경영어">
+        <meta name="apple-mobile-web-app-title" content="영어성경 365">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <!-- 안드로이드 Chrome 홈 화면 저장 시 앱 이름 지정 -->
-        <meta name="application-name" content="365 성경영어">
+        <meta name="application-name" content="영어성경 365">
     </head>
     <style>
     .card {
@@ -76,7 +75,8 @@ if df is not None:
     if 'current_idx' not in st.session_state:
         st.session_state.current_idx = 0
 
-    st.title("📖 365 성경 영어구문 암기")
+    # 상단 메인 타이틀 변경
+    st.title("📖 영어성경 365")
     
     col1, col2 = st.columns([3, 1])
     with col1:

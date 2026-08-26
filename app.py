@@ -2,15 +2,20 @@ import streamlit as st
 import pandas as pd
 import random
 
-# 페이지 기본 설정
+# 1. 페이지 기본 설정
 st.set_page_config(
-    page_title="365 성경 영어구문 암기 앱",
+    page_title="365 성경 영어구문 암기",
     page_icon="📖",
     layout="centered"
 )
 
-# 커스텀 CSS
+# 2. 홈 화면 저장용 메타 태그 및 커스텀 CSS 설정
 st.markdown("""
+    <head>
+        <meta name="apple-mobile-web-app-title" content="365 성경영어">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="365 성경영어">
+    </head>
     <style>
     .card {
         background-color: #ffffff;
@@ -50,7 +55,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 인터넷 주소 대신 방금 다운받은 data.csv 파일을 읽어옵니다.
+# 3. 데이터 로드 함수
 @st.cache_data
 def load_data():
     try:

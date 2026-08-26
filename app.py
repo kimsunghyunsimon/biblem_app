@@ -10,10 +10,13 @@ st.set_page_config(
 )
 
 # 2. 홈 화면 저장용 메타 태그 및 커스텀 CSS 설정
+# 2. 모바일 앱 이름 지정 메타 태그 및 스타일 설정
 st.markdown("""
     <head>
+        <!-- 아이폰/아이패드 홈 화면 저장 시 앱 이름 지정 -->
         <meta name="apple-mobile-web-app-title" content="365 성경영어">
         <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- 안드로이드 Chrome 홈 화면 저장 시 앱 이름 지정 -->
         <meta name="application-name" content="365 성경영어">
     </head>
     <style>
